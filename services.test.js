@@ -24,7 +24,6 @@ describe('processWords', () => {
 		const word = 'Pie. pecan applepie!';
 		const countOfOccurences = processWords(word, dataG);
 
-
 		expect(countOfOccurences).toEqual(
 			[{
 				word: 'pie',
@@ -45,8 +44,6 @@ describe('processWords', () => {
 		const word = 'Pie pie jack';
 		const countOfOccurences = processWords(word, dataG);
 
-		console.log(countOfOccurences);
-
 		expect(countOfOccurences).toEqual(
 			[
 				{
@@ -64,8 +61,6 @@ describe('processWords', () => {
 	it('should noue for word ', () => {
 		const word = '';
 		const countOfOccurences = processWords(word, dataG);
-
-		console.log(countOfOccurences);
 
 		expect(countOfOccurences).toEqual(
 			[

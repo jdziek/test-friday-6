@@ -100,10 +100,44 @@ async function storeRequestData (ipAdress, data) {
 }
 
 
+function sortData (sortType, array) {
+	let sortedResult = array;
+	switch (sortType) {
+	case 'asc':
+		sortedResult = array.sort((a, b) => {
+			return a.count > b.count;
+		});
+		break;
+	case 'desc':
+		sortedResult = array.sort((a, b) => {
+			return a.count < b.count;
+		});
+		break;
+	case 'alpha':
+		sortedResult = array.sort((a, b) => {
+			return a.word > b.word;
+		});
+		break;
+	case 'rev-alpha':
+		sortedResult = array.sort((a, b) => {
+			return a.word < b.word;
+		});
+		break;
+	default:
+			// code block
+	}
+
+	return sortedResult;
+}
+
+
+
 module.exports = {
 	processWords,
 	requestData,
 	getData,
 	writeToFile,
-	storeRequestData
+	storeRequestData,
+	sortData
+
 };
