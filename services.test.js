@@ -57,22 +57,4 @@ describe('processWords', () => {
 			]
 		);
 	});
-
-	it('should noue for word ', () => {
-		const word = '';
-		const countOfOccurences = processWords(word, dataG);
-
-		expect(countOfOccurences).toEqual(
-			[
-				{
-					word: 'pie',
-					count: 4
-				},
-				{
-					word: 'jack',
-					count: 3
-				}
-			]
-		);
-	});
 });

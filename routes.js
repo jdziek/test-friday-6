@@ -15,6 +15,9 @@ router.post('/', async (req, res) => {
 
 	try {
 		const pageContent = await requestData(url);
+		console.log(pageContent);
+		console.log(data);
+
 		countedWords = processWords(words, pageContent);
 
 		// usually i would sort using mongo db aggregate query for that
