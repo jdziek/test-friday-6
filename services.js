@@ -3,6 +3,7 @@ const request = require('request-promise');
 const fs = require('fs');
 const util = require('util');
 const path = require('path');
+// test git
 
 function processWords (words, data) {
 	const countedWords = [];
